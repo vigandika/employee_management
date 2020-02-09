@@ -1,0 +1,36 @@
+{{define "content"}}
+    <h4>Due Tasks</h4>
+    <hr>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <thead class="thead-light">
+        <tr>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Due Date</th>
+            <th>Bonus</th>
+            <th>Taken by</th>
+        </tr>
+        </thead>
+
+        {{range $val := .Tasks}}
+            <tr>
+                <td>{{ $val.Name }}</td>
+                <td>{{ $val.Details }}</td>
+                <td>{{ $val.DueDate }}</td>
+                <td>{{ $val.Bonus }}</td>
+                <td>{{ $val.EmpName }}</td>
+
+            </tr>
+        {{end}}
+
+    </table>
+        <hr>
+        <h4>ADD NEW TASK</h4>
+    <form action="http://localhost:8085/manager/addTask" method="post">
+        <p><input class="form-control" type="text" name="taskTitle" placeholder="Task Title" autofocus required></p>
+        <p><input class="form-control" type="text" name="taskDetails" placeholder="Details" autofocus required></p>
+        <p><input class="form-control"  type="date" name="dueDate" placeholder="Due Date" required></p>
+        <p><input class="form-control"  type="number" name="bonus" placeholder="Bonus"></p>
+        <p><input class="btn btn-success" type="submit" value="CREATE TASK"></p>
+    </form>
+{{end}}

@@ -1,0 +1,10 @@
+{{define "content"}}
+    <h4>Happy to see you again!</h4>
+    <form action="http://localhost:8085/logincheck" method="post">
+        <p><input class="form-control" type="email" name="email" placeholder="Email" autofocus required></p>
+        <p><input class="form-control"  type="password" name="password" placeholder="Password" required></p>
+        <p><input  type="radio" name="role" value="manager" required>Manager</p>
+        <p><input  type="radio" name="role" value="employee">Employee</p>
+        <p><input class="btn btn-primary" type="submit" value="LOGIN"></p>
+    </form>
+{{end}}

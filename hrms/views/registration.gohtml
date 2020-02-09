@@ -1,0 +1,16 @@
+{{define "content"}}
+    <h4>Welcome to our company</h4>
+    <form action="http://localhost:8085/registrationCheck" method="post">
+        <p><input class="form-control" type="text" name="name" placeholder="Name" autofocus></p>
+        <p><input class="form-control" type="text" name="surname" placeholder="Surname" autofocus></p>
+        <p><input class="form-control" type="email" name="email" placeholder="Email" autofocus></p>
+        <p><input class="form-control"  type="password" name="password1" placeholder="Password 1"></p>
+        <p><input class="form-control"  type="password" name="password2" placeholder="Password 2"></p>
+        <select name="managerEmail">
+            <option>bilalberisha@gmail.com</option>
+            <option>gresahoti@gmail.com</option>
+            <option>hajrullahosmanaj@gmail.com</option>
+        </select>
+        <p><input class="btn btn-primary" type="submit" value="REGISTER"></p>
+    </form>
+{{end}}

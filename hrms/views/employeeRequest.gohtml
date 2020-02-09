@@ -1,0 +1,19 @@
+{{define "content"}}
+
+    <h4>Make a request</h4>
+    <form action="http://localhost:8085/employee/makeRequest" method="post">
+        <select name="requestType">
+            <option>Maternity leave</option>
+            <option>Vacation</option>
+            <option>Raise</option>
+        </select>
+        <br/>
+        <p><input class="form-control" type="text" name="requestDetails" placeholder="Details" autofocus required></p>
+        <p><input class="btn btn-success" type="submit" value="SEND REQUEST"></p>
+
+        <hr>
+
+    </form>
+
+
+{{end}}
